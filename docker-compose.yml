@@ -36,9 +36,7 @@ services:
       - laravel
 
   php:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: ./.docker/php
     container_name: php_be-yourself
     volumes:
       - ./src:/var/www

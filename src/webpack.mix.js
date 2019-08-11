@@ -17,9 +17,10 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.webpackConfig({
     devServer: {
-        watchOptions:{
-            poll:true
-        },
+        watchOptions: {
+            aggregateTimeout: 500, // delay before reloading
+            poll: 1000 // enable polling since fsevents are not supported in docker
+        }
     },
     resolve: {
         extensions: ['.js', '.json', '.vue'],
