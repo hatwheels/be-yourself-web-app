@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 /*
  |--------------------------------------------------------------------------
@@ -12,26 +12,22 @@ const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+Mix.listen('configReady', config => {
+  const scssRule = config.module.rules.find(r => r.test.toString() === /\.scss$/.toString())
+  const scssOptions = scssRule.loaders.find(l => l.loader === 'sass-loader').options
+  scssOptions.data = '@import "./resources/sass/styles.scss";'
 
-mix.webpackConfig({
-    devServer: {
-        watchOptions: {
-            aggregateTimeout: 500, // delay before reloading
-            poll: 1000 // enable polling since fsevents are not supported in docker
-        }
-    },
-    resolve: {
-        extensions: ['.js', '.json', '.vue'],
-        alias: {
-        '~': path.join(__dirname, './resources/js'),
-        '$comp': path.join(__dirname, './resources/js/components')
-        }
-    },
-    plugins: [
-        new VuetifyLoaderPlugin()
-    ]
-});
+  const sassRule = config.module.rules.find(r => r.test.toString() === /\.sass$/.toString())
+  const sassOptions = sassRule.loaders.find(l => l.loader === 'sass-loader').options
+  sassOptions.data = '@import "./resources/sass/styles.scss"'
+})
 
-// mix.browserSync(process.env.APP_URL);
+mix
+  .options({
+    extractVueStyles: true,
+  })
+  .webpackConfig({
+    plugins: [new VuetifyLoaderPlugin()]
+  })
+  .js('resources/js/app.js', 'public/js')
+  .sass('resources/sass/app.scss', 'public/css')
