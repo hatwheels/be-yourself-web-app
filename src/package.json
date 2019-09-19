@@ -11,23 +11,20 @@
   },
   "dependencies": {
     "vue": "^2.5.17",
-    "vuetify": "^2.0.0"
+    "vuetify": "^2.0.18"
   },
   "devDependencies": {
-    "babel-polyfill": "^6.26.0",
     "@mdi/font": "^3.9.97",
     "axios": "^0.19",
-    "bootstrap": "^4.1.0",
+    "babel-polyfill": "^6.26.0",
     "cross-env": "^5.1",
     "deepmerge": "^4.0.0",
     "fibers": "^4.0.1",
     "jquery": "^3.2",
     "laravel-mix": "^4.0.7",
-    "lodash": "^4.17.13",
-    "popper.js": "^1.12",
     "resolve-url-loader": "^2.3.1",
-    "sass": "^1.22.9",
-    "sass-loader": "7.1.0",
+    "sass": "^1.22.12",
+    "sass-loader": "7.*",
     "vue-cli-plugin-vuetify": "^0.6.3",
     "vue-template-compiler": "^2.6.10",
     "vuetify-loader": "^1.2.2"

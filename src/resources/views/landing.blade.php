@@ -36,12 +36,7 @@
                 </div>
             @endif
             <div id="app">
-                <nav>
-                    <sticky-header></sticky-header>
-                </nav>
-                <main>
-                    <hello-world></hello-world>
-                </main>
+                <app></app>
             </div>
         </div>
     </body>

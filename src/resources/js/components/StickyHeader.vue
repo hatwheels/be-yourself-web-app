@@ -1,8 +1,8 @@
 <template>
     <v-app-bar
-        class="primary"
       app
       fixed
+      color="red"
     >
       <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
 

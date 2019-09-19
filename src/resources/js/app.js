@@ -6,14 +6,10 @@
 import 'babel-polyfill';
 import Vue from 'vue';
 import vuetify from '../plugins/vuetify';
+import '@mdi/font/css/materialdesignicons.css';
+import 'vuetify/dist/vuetify.min.css';
 
 Vue.config.productionTip = false;
-
-// import 'babel-polyfill';
-// import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
-// import vuetify from '../plugins/vuetify'
-
-require('./bootstrap');
 
 window.Vue = require('vue');
 window.Vuetify = require('vuetify');
@@ -30,9 +26,7 @@ window.Vuetify = require('vuetify');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 Vue.component('app', require('./components/App.vue').default);
 Vue.component('hello-world', require('./components/HelloWorld.vue').default);
-Vue.component('sticky-header', require('./components/Header.vue').default);
-
-//Vue.use(Vuetify)
+Vue.component('sticky-header', require('./components/StickyHeader.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
