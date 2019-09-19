@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 
 /*
  |--------------------------------------------------------------------------
@@ -27,7 +27,13 @@ mix
     extractVueStyles: true,
   })
   .webpackConfig({
+    resolve: {
+        alias: {
+          '@': path.resolve('resources/assets/sass')
+        }
+      },
     plugins: [new VuetifyLoaderPlugin()]
   })
   .js('resources/js/app.js', 'public/js')
   .sass('resources/sass/app.scss', 'public/css')
+  .sourceMaps();

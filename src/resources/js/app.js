@@ -3,14 +3,20 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-
 import 'babel-polyfill';
+import Vue from 'vue';
+import vuetify from '../plugins/vuetify';
+
+Vue.config.productionTip = false;
+
+// import 'babel-polyfill';
+// import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
+// import vuetify from '../plugins/vuetify'
 
 require('./bootstrap');
 
 window.Vue = require('vue');
 window.Vuetify = require('vuetify');
-Vue.use(Vuetify);
 
 /**
  * The following block of code may be used to automatically register your
@@ -23,8 +29,10 @@ Vue.use(Vuetify);
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 Vue.component('app', require('./components/App.vue').default);
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('hello-world', require('./components/HelloWorld.vue').default);
+Vue.component('sticky-header', require('./components/Header.vue').default);
+
+//Vue.use(Vuetify)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -33,6 +41,7 @@ Vue.component('hello-world', require('./components/HelloWorld.vue').default);
  */
 
 const app = new Vue({
+    vuetify,
     el: '#app',
 });
 
