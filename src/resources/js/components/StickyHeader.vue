@@ -1,47 +1,31 @@
 <template>
-    <v-app-bar
-      app
-      fixed
-      color="red"
+    <v-img
+      :src='require("../../../public/images/be-yourself.jpg")'
     >
-      <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
-
-      <v-toolbar-title><strong class="red--text text--lighten-1">Be Yourself!</strong></v-toolbar-title>
-
-      <div class="flex-grow-1"></div>
-
-      <v-btn icon  color="primary">
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <!-- <v-menu
-        left
-        bottom
+      <v-app-bar
+        app
+        color='rgb(0, 0, 0, 0)'
+        flat
+        hide-on-scroll
       >
-        <template v-slot:activator="{ on }">
-          <v-btn icon v-on="on">
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
-        </template>
 
-        <v-list>
-          <v-list-item
-            v-for="n in 5"
-            :key="n"
-            @click="() => {}"
-          >
-            <v-list-item-title>Option {{ n }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu> -->
-    </v-app-bar>
+        <v-toolbar-title><strong class="white--text text--lighten-1">Be Yourself!</strong></v-toolbar-title>
+
+        <div class="flex-grow-1"></div>
+
+        <v-btn text small color="white">Sign Up</v-btn>
+
+        <v-btn text small color="white">Log In</v-btn>
+
+      </v-app-bar>
+    </v-img>
 </template>
 
 <script>
     export default {
     }
 </script>
+
+<style>
+
+</style>

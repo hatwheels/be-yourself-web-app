@@ -25,7 +25,6 @@ window.Vuetify = require('vuetify');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 Vue.component('app', require('./components/App.vue').default);
-Vue.component('hello-world', require('./components/HelloWorld.vue').default);
 Vue.component('sticky-header', require('./components/StickyHeader.vue').default);
 
 /**
