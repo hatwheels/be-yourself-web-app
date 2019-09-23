@@ -1,4 +1,5 @@
 <template>
+    <v-card >
     <v-img
       :src='require("../../../public/images/be-yourself.jpg")'
     >
@@ -13,12 +14,16 @@
 
         <div class="flex-grow-1"></div>
 
-        <v-btn text small color="white">Sign Up</v-btn>
+        <v-btn class="ms-2" rounded color="green" dark>Get hosted</v-btn>
 
-        <v-btn text small color="white">Log In</v-btn>
+        <v-btn class="ms-2" text small color="white">Sign Up</v-btn>
+
+        <v-btn class="ms-2" text small color="white">Log In</v-btn>
 
       </v-app-bar>
+      <v-card-title class="align-center justify-center fill-height white--text">I'm a title</v-card-title>
     </v-img>
+    </v-card>
 </template>
 
 <script>
