@@ -27,6 +27,8 @@ window.Vuetify = require('vuetify');
 Vue.component('app', require('./components/App.vue').default);
 Vue.component('sticky-header', require('./components/StickyHeader.vue').default);
 Vue.component('my-footer', require('./components/MyFooter.vue').default);
+Vue.component('log-in-form', require('./components/LogInForm.vue').default);
+Vue.component('sign-up-form', require('./components/SignUpForm.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
