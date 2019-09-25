@@ -26,11 +26,20 @@
   import { required, maxLength, email, password } from 'vuelidate/lib/validators'
 
   export default {
+    mixins: [validationMixin],
+
+    validations: {
+      name: { required, maxLength: maxLength(10) },
+      email: { required, email },
+      password: { required, password },
+    },
+
     data () {
       return {
         state: false
       }
     },
+
     watch: {
       state: function() {
           console.log('signup state: ' + this.state)

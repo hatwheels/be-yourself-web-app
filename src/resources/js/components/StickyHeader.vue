@@ -36,6 +36,7 @@
       SignUpForm,
       LogInForm,
     },
+
     data () {
       return {
       }
