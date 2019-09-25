@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import StickyHeader from './StickyHeader';
-import MyFooter from './MyFooter';
+  import StickyHeader from './StickyHeader';
+  import MyFooter from './MyFooter';
 
-export default {
-  name: 'App',
-  components: {
-    StickyHeader,
-    MyFooter,
-  },
-};
+  export default {
+    name: 'App',
+    components: {
+      StickyHeader,
+      MyFooter,
+    },
+  };
 </script>
