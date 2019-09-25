@@ -19,9 +19,47 @@
 
         <v-btn class="ms-2" rounded color="green" dark>Get hosted</v-btn>
 
-        <v-btn class="ms-2" text small color="white">Sign Up</v-btn>
+        <v-dialog
+          v-model="signUpDialog"
+          width="500"
+        >
+          <template v-slot:activator="{ on }">
+            <v-btn
+              class="ms-2"
+              text
+              small
+              color="white"
+              v-on="on"
+            >
+              Sign Up
+            </v-btn>
+          </template>
+          <v-card>
+            <v-card-title>test</v-card-title>
+            <v-card-actions><v-btn @click="signUpDialog = false">OK</v-btn></v-card-actions>
+          </v-card>
+        </v-dialog>
 
-        <v-btn class="ms-2" text small color="white">Log In</v-btn>
+        <v-dialog
+          v-model="logInDialog"
+          width="500"
+        >
+          <template v-slot:activator="{ on }">
+            <v-btn
+              class="ms-2"
+              text
+              small
+              color="white"
+              v-on="on"
+            >
+              Log In
+            </v-btn>
+          </template>
+          <v-card>
+            <v-card-title>test2</v-card-title>
+            <v-card-actions><v-btn @click="logInDialog = false">OK</v-btn></v-card-actions>
+          </v-card>
+        </v-dialog>
 
       </v-app-bar>
     </v-img>
@@ -29,6 +67,20 @@
 
 <script>
     export default {
+      data () {
+        return {
+          signUpDialog: false,
+          logInDialog: false,
+        }
+      },
+      watch: {
+        signUpDialog: function() {
+          console.log('signup state: ' + this.signUpDialog)
+        },
+        logInDialog: function() {
+          console.log('login state: ' + this.logInDialog)
+        },
+      }
     }
 </script>
 
