@@ -26,6 +26,7 @@ window.Vuetify = require('vuetify');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 Vue.component('app', require('./components/App.vue').default);
 Vue.component('sticky-header', require('./components/StickyHeader.vue').default);
+Vue.component('my-footer', require('./components/MyFooter.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
