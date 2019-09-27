@@ -4,11 +4,9 @@
   >
     <v-app-bar
       app
-      color='rgb(0, 0, 0, 0)'
+      color='transparent'
       flat
     >
-
-      <!-- <v-toolbar-title><strong class="white--text text--lighten-1">Be Yourself!</strong></v-toolbar-title> -->
       <v-img :src='require("../../../public/images/be-yourself_inverted-transparent-logo.png")'
         max-height="40px"
         max-width="180px"
@@ -17,7 +15,7 @@
 
       <div class="flex-grow-1"></div>
 
-      <v-btn class="ms-2" rounded color="green" dark>Get hosted</v-btn>
+      <v-btn class="ms-2" rounded color='accent' dark>Get hosted</v-btn>
 
       <SignUpForm/>
 

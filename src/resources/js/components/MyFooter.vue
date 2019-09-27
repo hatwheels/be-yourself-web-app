@@ -1,6 +1,6 @@
 <template>
   <v-footer
-    color="#e84fb5"
+    color="secondary"
     app
   >
     <span class="white--text"><strong>Be Yourself</strong> &copy; 2019</span>
