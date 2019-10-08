@@ -18,3 +18,12 @@
     },
   };
 </script>
+
+<style>
+  a:focus,
+  button:focus,
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+</style>
