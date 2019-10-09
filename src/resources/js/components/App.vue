@@ -1,18 +1,56 @@
 <template>
   <v-app>
     <StickyHeader/>
-    
-    <v-img :src='require("../../../public/images/be-yourself_02.jpg")'>
-    <div style="height: 100%;" class="d-flex align-center justify-space-between">
-        <div style="width: 33%" class="pl-8 display-3 font-weight-bold text-center white--text">Travel all over the world</div>
-        <div style="width: 33%" class="pl-8 display-3 font-weight-bold text-center white--text">Meet new people</div>
-    </div>
-    </v-img>
 
-    <v-content>
+    <v-content class='pt-0 primary'>
+
+      <v-img :src='require("../../../public/images/be-yourself_02.jpg")'>
+      <div
+        class="d-flex align-center justify-space-between"
+        style="height: 100%;"
+      >
+        <div class="pl-8 display-3 font-weight-bold text-center white--text"
+          style="width: 33%"
+        >
+          Travel all over the world
+        </div>
+        <div
+          class="pl-8 display-3 font-weight-bold text-center white--text"
+          style="width: 33%"
+        >
+          Meet new people
+        </div>
+      </div>
+      </v-img>
 
       <v-container fluid>
-        <div class="display-3 font-weight-bold">Be Yourself!</div>
+        <v-row>
+          <v-col>
+            <div class="display-3 font-weight-bold text-center">Be Yourself!</div>
+          </v-col>
+        </v-row>
+        
+        <v-row>
+          <v-col>
+            <v-avatar size=400>
+              <v-img :src='require("../../../public/images/freedom.jpg")'></v-img>
+            </v-avatar>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            <v-avatar size=400>
+              <v-img :src='require("../../../public/images/adventure.jpg")'></v-img>
+            </v-avatar>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            <v-avatar size=400>
+              <v-img :src='require("../../../public/images/lovers.jpg")'></v-img>
+            </v-avatar>
+          </v-col>
+        </v-row>
       </v-container>
 
     </v-content>
@@ -32,10 +70,6 @@
       StickyHeader,
       MyFooter,
     },
-
-    computed: {
-
-    }
   };
 </script>
 
