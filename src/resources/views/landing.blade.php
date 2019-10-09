@@ -13,7 +13,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Lato:100,300,400,500,700,900">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
 
         <!-- Styles -->
@@ -35,7 +35,7 @@
                     @endauth
                 </div>
             @endif
-            <div id="app">
+            <div id="home">
                 <app></app>
             </div>
         </div>

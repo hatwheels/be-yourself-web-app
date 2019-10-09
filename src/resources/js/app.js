@@ -38,7 +38,7 @@ Vue.component('sign-up-form', require('./components/SignUpForm.vue').default);
 
 const app = new Vue({
     vuetify,
-    el: '#app',
+    el: '#home',
 });
 
 export default app;
