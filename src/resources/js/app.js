@@ -6,6 +6,7 @@
 import 'babel-polyfill';
 import Vue from 'vue';
 import vuetify from '../plugins/vuetify';
+import tinycolor from 'tinycolor2';
 import '@mdi/font/css/materialdesignicons.css';
 import 'vuetify/dist/vuetify.min.css';
 
@@ -13,6 +14,7 @@ Vue.config.productionTip = false;
 
 window.Vue = require('vue');
 window.Vuetify = require('vuetify');
+window.Tinycolor = require('tinycolor2');
 
 /**
  * The following block of code may be used to automatically register your
@@ -40,5 +42,7 @@ const app = new Vue({
     vuetify,
     el: '#home',
 });
+
+Object.defineProperty(Vue.prototype, '$tinycolor', { value: tinycolor });
 
 export default app;

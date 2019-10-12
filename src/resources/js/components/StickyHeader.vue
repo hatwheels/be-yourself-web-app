@@ -1,7 +1,9 @@
 <template>
   <v-app-bar
     app
-    color="transparent"
+    id="bar"
+    ref="bar"
+    :color="this.dynamicColor"
     flat
   >
     <v-img :src='require("../../../public/images/be-yourself_inverted-transparent-logo.png")'
@@ -30,10 +32,9 @@
       LogInForm,
     },
 
-    data () {
-      return {
-      }
-    }
+    props: {
+      dynamicColor: String,
+    },
   }
 </script>
 
