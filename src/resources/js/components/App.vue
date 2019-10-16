@@ -1,36 +1,10 @@
 <template>
   <v-app>
     <StickyHeader :dynamicColor="isImgVisible ? 'transparent' : 'rgb(0, 0, 0, 0.3)'"/>
-
+    
     <v-content class='pt-0 primary'>
-
-      <v-img
-        v-observe-visibility="{
-          callback: visibilityImgChanged,
-            intersection: {
-              root: $refs.bar,
-              threshold: 0.05,
-            },
-          }"
-        :src='require("../../../public/images/be-yourself_02.jpg")'
-      >
-        <div
-          class="d-flex align-center justify-space-between"
-          style="height: 100%;"
-        >
-          <div class="pl-8 display-3 font-weight-bold text-center white--text"
-            style="width: 33%"
-          >
-            Travel all over the world
-          </div>
-          <div
-            class="pl-8 display-3 font-weight-bold text-center white--text"
-            style="width: 33%"
-          >
-            Meet new people
-          </div>
-        </div>
-      </v-img>
+    
+      <Introduction :isImgVisible.sync="isImgVisible"></Introduction>
 
       <v-container fluid>
 
@@ -47,12 +21,26 @@
             </v-card>
           </v-col>
           <v-col cols=4>
-            <div class="display-2 font-weight-bold text-center">Your Freedom</div>
+            <v-card flat color="primary">
+              <v-card-title class="display-2 font-weight-bold text-center">Your Freedom</v-card-title>
+              <v-card-text>
+                <p class="headline">
+                  Travel around the world
+                </p>
+              </v-card-text>
+            </v-card>
           </v-col>
         </v-row>
         <v-row justify="space-around" align="center">
           <v-col cols=4>
-            <div class="display-2 font-weight-bold text-center">Adventure</div>
+            <v-card flat color="primary">
+              <v-card-title class="display-2 font-weight-bold text-center">Adventure</v-card-title>
+              <v-card-text>
+                <p class="headline">
+                  Make new quests
+                </p>
+              </v-card-text>
+            </v-card>
           </v-col>
           <v-col cols=4>
             <v-card>
@@ -67,7 +55,14 @@
             </v-card>
           </v-col>
           <v-col cols=4>
-            <div class="display-2 font-weight-bold text-center">Love &amp; Friendship</div>
+            <v-card flat color="primary">
+              <v-card-title class="display-2 font-weight-bold text-center">Love &amp; Friendship</v-card-title>
+                <v-card-text>
+                  <p class="headline">
+                    Make new friends, meet new lovers
+                  </p>
+                </v-card-text>
+            </v-card>
           </v-col>
         </v-row>
 
@@ -82,7 +77,7 @@
 <script>
   import StickyHeader from './StickyHeader'
   import MyFooter from './MyFooter'
-  import VueObserveVisibility from 'vue-observe-visibility'
+  import Introduction from './Introduction'
 
   export default {
     name: 'App',
@@ -90,19 +85,13 @@
     components: {
       StickyHeader,
       MyFooter,
-      VueObserveVisibility,
+      Introduction,
     },
 
     data () {
-      return {
-        isImgVisible: true,
-      }
-    },
-
-    methods: {
-      visibilityImgChanged (isVisible, entry) {
-        this.isImgVisible = isVisible
-      }
+        return {
+            isImgVisible: true,
+        }
     },
   };
 </script>

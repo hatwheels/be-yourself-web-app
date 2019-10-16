@@ -23,8 +23,8 @@
 </template>
 
 <script>
-  import LogInForm from './LogInForm';
-  import SignUpForm from './SignUpForm';
+  import LogInForm from './LogInForm'
+  import SignUpForm from './SignUpForm'
 
   export default {
     components: {
