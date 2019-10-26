@@ -6,14 +6,14 @@
     
       <Introduction :isImgVisible.sync="isImgVisible"></Introduction>
 
+      <v-row justify="center" align="center">
+        <v-col class="accent">
+          <div class="info--text display-3 font-weight-bold text-center">Be Yourself!</div>
+        </v-col>
+      </v-row>
+
       <v-container fluid>
 
-        <v-row justify="center" align="center">
-          <v-col>
-            <div class="display-3 font-weight-bold text-center">Be Yourself!</div>
-          </v-col>
-        </v-row>
-        
         <v-row justify="space-around" align="center">
           <v-col cols=4>
             <v-card>

@@ -11,7 +11,7 @@
         dark
         v-on="on"
       >
-        Sign Up
+        Be a Host
       </v-btn>
     </template>
       <v-card tile>
@@ -72,7 +72,7 @@
                 @blur="$v.repeatPassword.$touch()"
             ></v-text-field>
 
-            <v-btn block x-large color="accent" @click="submit">Sign Up</v-btn>
+            <v-btn block x-large color="green white--text" @click="submit">Sign Up</v-btn>
         </form>
       </v-card>
   </v-dialog>

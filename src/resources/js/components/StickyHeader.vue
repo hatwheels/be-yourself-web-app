@@ -14,7 +14,7 @@
     
     <div class="flex-grow-1"></div>
 
-    <v-btn class="ms-2" rounded color='accent' dark>Get hosted</v-btn>
+    <v-btn class="ms-2" rounded color='green' dark>Be a Guest</v-btn>
 
     <SignUpForm/>
 

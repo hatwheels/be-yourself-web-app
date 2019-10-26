@@ -41,7 +41,7 @@
               @blur="$v.password.$touch()"
               @click:append="show = !show"
           ></v-text-field>
-          <v-btn block x-large color="accent" @click="submit">Log In</v-btn>
+          <v-btn block x-large color="green white--text" @click="submit">Log In</v-btn>
       </form>
     </v-card>
     <!-- <v-card>
