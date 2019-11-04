@@ -9,3 +9,4 @@
 * Her hobbies.
 * House rules.
 * Montly calendar in order to see reservations.
+* Notification 2 days before reservations.

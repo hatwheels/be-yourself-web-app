@@ -21,7 +21,7 @@
         <v-card-title
           class="headline font-weight-bold"
         >
-          Register your apartment and start hosting in &nbsp;<span class="display-1 font-weight-bold secondary--text"> April 2020!</span>
+          Register your apartment and start hosting from &nbsp;<span class="display-1 font-weight-bold secondary--text"> April 2020!</span>
         </v-card-title>
         <form class="px-4 py-4 m-auto caption" lazy-validation>
             <v-text-field

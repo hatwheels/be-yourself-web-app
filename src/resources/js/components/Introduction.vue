@@ -21,7 +21,7 @@
             <div
                 class="pb-12 align-self-end display-3 font-weight-bold text-center primary--text"
             >
-                Be Yourself!
+                Be Yourself <br> Get ready to go!
             </div>
             <div
                 class="pl-8 display-3 font-weight-bold text-center primary--text"
