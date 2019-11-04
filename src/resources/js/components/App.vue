@@ -28,7 +28,7 @@
           <v-col><v-sheet class="mx-auto" color="secondary" height="10" width="200"></v-sheet></v-col>
         </v-row>
         <v-row  justify="center" align="center">
-          <v-col><p class="info--text headline text-center">Feel free to travel all over the world truly as a guest <strong>without accomodation expenses!</strong></p></v-col>
+          <v-col><p class="info--text headline text-center">Feel free to travel all over the world as a <strong>real guest without accomodation expenses!</strong></p></v-col>
         </v-row>
 
       </div>
@@ -38,15 +38,15 @@
         <v-row justify="space-around" align="center">
           <v-col cols=4>
             <v-card>
-              <v-img :src='require("../../../public/images/adventure.jpg")'></v-img>
+              <v-img :src='require("../../../public/images/freedom.jpg")'></v-img>
             </v-card>
           </v-col>
           <v-col cols=4>
             <v-card flat color="primary">
-              <v-card-title class="info--text display-2 font-weight-bold">Adventure</v-card-title>
+              <v-card-title class="info--text display-2 font-weight-bold">Your Freedom</v-card-title>
               <v-card-text>
                 <p class="pb-4 headline">
-                  Make new quests
+                  Travel around the world
                 </p>
                 <p class="title">
                   Choose the host with common interests and hobbies and live a new adventure.
@@ -59,10 +59,10 @@
         <v-row justify="space-around" align="center">
           <v-col cols=4>
             <v-card flat color="primary">
-              <v-card-title class="info--text display-2 font-weight-bold">Your Freedom</v-card-title>
+              <v-card-title class="info--text display-2 font-weight-bold">Adventure</v-card-title>
               <v-card-text>
                 <p class="pb-4 headline">
-                  Travel around the world
+                  Make new quests
                 </p>
                 <p class="title">
                   Wherever you are in the world, you have the opportunity to host and meet new people with the same interests and hobbies.
@@ -75,7 +75,7 @@
           </v-col>
           <v-col cols=4>
             <v-card>
-              <v-img :src='require("../../../public/images/freedom.jpg")'></v-img>
+              <v-img :src='require("../../../public/images/adventure.jpg")'></v-img>
             </v-card>
           </v-col>
         </v-row>
@@ -97,7 +97,7 @@
                   Make new friends as a host or guest. Go skiing, fishing, watch a movie or have dinner at a restaurant together.
                 </p>
                 <p class="title">
-                  Maybe you' ve just met a new friend or even a big love from a different place of the world.
+                  Maybe you' ve just met a new friend or even a big love from another place of the world.
                 </p>
               </v-card-text>
             </v-card>
