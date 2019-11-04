@@ -18,7 +18,11 @@
         <v-btn text icon @click="state = false">
           <v-icon small>mdi-close</v-icon>
         </v-btn>
-        <v-card-title class="headline font-weight-bold">Register your apartment and start hosting in April 2020!</v-card-title>
+        <v-card-title
+          class="headline font-weight-bold"
+        >
+          Register your apartment and start hosting in &nbsp;<span class="display-1 font-weight-bold secondary--text"> April 2020!</span>
+        </v-card-title>
         <form class="px-4 py-4 m-auto caption" lazy-validation>
             <v-text-field
                 v-model="firstName"

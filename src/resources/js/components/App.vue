@@ -11,9 +11,9 @@
     >
       <v-card flat color="transparent">
         <v-btn text icon @click="overlay = false">
-          <v-icon color="secondary" small>mdi-close</v-icon>
+          <v-icon color="secondary" large>mdi-close</v-icon>
         </v-btn>
-        <v-card-title class="secondary--text display-4 font-weight-bold">Out in April!</v-card-title>
+        <v-card-title class="secondary--text display-4 font-weight-bold">Out in April 2020!</v-card-title>
       </v-card>
     </v-overlay>
 
