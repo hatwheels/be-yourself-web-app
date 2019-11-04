@@ -5,7 +5,7 @@
   >
     <template v-slot:activator="{ on }">
       <v-btn
-        class="ms-2"
+        class="caption font-weight-bold ms-2"
         text
         small
         dark
@@ -18,7 +18,8 @@
         <v-btn text icon @click="state = false">
           <v-icon small>mdi-close</v-icon>
         </v-btn>
-        <form class="px-4 py-4 m-auto" lazy-validation>
+        <v-card-title class="headline font-weight-bold">Register your apartment and start hosting in April 2020!</v-card-title>
+        <form class="px-4 py-4 m-auto caption" lazy-validation>
             <v-text-field
                 v-model="firstName"
                 :error-messages="firstNameErrors"
@@ -72,7 +73,7 @@
                 @blur="$v.repeatPassword.$touch()"
             ></v-text-field>
 
-            <v-btn block x-large color="green white--text" @click="submit">Sign Up</v-btn>
+            <v-btn block x-large color="green primary--text font-weight-bold" @click="submit">Sign Up</v-btn>
         </form>
       </v-card>
   </v-dialog>

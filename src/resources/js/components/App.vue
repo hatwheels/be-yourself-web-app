@@ -1,53 +1,85 @@
 <template>
   <v-app>
-    <StickyHeader :dynamicColor="isImgVisible ? 'transparent' : 'rgb(0, 0, 0, 0.3)'"/>
+    <StickyHeader :showOverlay.sync="overlay" :dynamicColor="isImgVisible ? 'transparent' : 'rgb(0, 0, 0, 0.3)'"/>
     
     <v-content class='pt-0 primary'>
-    
+
+    <v-overlay
+      :value="overlay"
+      opacity="0.8"
+      color="accent"
+    >
+      <v-card flat color="transparent">
+        <v-btn text icon @click="overlay = false">
+          <v-icon color="secondary" small>mdi-close</v-icon>
+        </v-btn>
+        <v-card-title class="secondary--text display-4 font-weight-bold">Out in April!</v-card-title>
+      </v-card>
+    </v-overlay>
+
       <Introduction :isImgVisible.sync="isImgVisible"></Introduction>
 
-      <v-row justify="center" align="center">
-        <v-col class="accent">
-          <div class="info--text display-3 font-weight-bold text-center">Be Yourself!</div>
-        </v-col>
-      </v-row>
+      <div class="accent pt-6 pb-6">
 
-      <v-container fluid>
-
-        <v-row justify="space-around" align="center">
-          <v-col cols=4>
-            <v-card>
-              <v-img :src='require("../../../public/images/freedom.jpg")'></v-img>
-            </v-card>
-          </v-col>
-          <v-col cols=4>
-            <v-card flat color="primary">
-              <v-card-title class="display-2 font-weight-bold text-center">Your Freedom</v-card-title>
-              <v-card-text>
-                <p class="headline">
-                  Travel around the world
-                </p>
-              </v-card-text>
-            </v-card>
-          </v-col>
+        <v-row justify="center" align="center">
+          <v-col><div class="info--text display-3 font-weight-bold text-center">Free Hospitality</div></v-col>
         </v-row>
+        <v-row justify="center" align="center">
+          <v-col><v-sheet class="mx-auto" color="secondary" height="10" width="200"></v-sheet></v-col>
+        </v-row>
+        <v-row  justify="center" align="center">
+          <v-col><p class="info--text headline text-center">Feel free to travel all over the world truly as a guest <strong>without accomodation expenses!</strong></p></v-col>
+        </v-row>
+
+      </div>
+
+      <v-container class="pt-12 pb-12" fluid>
+
         <v-row justify="space-around" align="center">
-          <v-col cols=4>
-            <v-card flat color="primary">
-              <v-card-title class="display-2 font-weight-bold text-center">Adventure</v-card-title>
-              <v-card-text>
-                <p class="headline">
-                  Make new quests
-                </p>
-              </v-card-text>
-            </v-card>
-          </v-col>
           <v-col cols=4>
             <v-card>
               <v-img :src='require("../../../public/images/adventure.jpg")'></v-img>
             </v-card>
           </v-col>
+          <v-col cols=4>
+            <v-card flat color="primary">
+              <v-card-title class="info--text display-2 font-weight-bold">Adventure</v-card-title>
+              <v-card-text>
+                <p class="pb-4 headline">
+                  Make new quests
+                </p>
+                <p class="title">
+                  Choose the host with common interests and hobbies and live a new adventure.
+                </p>
+              </v-card-text>
+            </v-card>
+          </v-col>
         </v-row>
+
+        <v-row justify="space-around" align="center">
+          <v-col cols=4>
+            <v-card flat color="primary">
+              <v-card-title class="info--text display-2 font-weight-bold">Your Freedom</v-card-title>
+              <v-card-text>
+                <p class="pb-4 headline">
+                  Travel around the world
+                </p>
+                <p class="title">
+                  Wherever you are in the world, you have the opportunity to host and meet new people with the same interests and hobbies as you.
+                </p>
+                <p class="title">
+                  Hospitality is a virtue describing us humans since ancient times and we are pleased it lives on to this day.
+                </p>
+              </v-card-text>
+            </v-card>
+          </v-col>
+          <v-col cols=4>
+            <v-card>
+              <v-img :src='require("../../../public/images/freedom.jpg")'></v-img>
+            </v-card>
+          </v-col>
+        </v-row>
+
         <v-row justify="space-around" align="center">
           <v-col cols=4>
             <v-card>
@@ -56,12 +88,18 @@
           </v-col>
           <v-col cols=4>
             <v-card flat color="primary">
-              <v-card-title class="display-2 font-weight-bold text-center">Love &amp; Friendship</v-card-title>
-                <v-card-text>
-                  <p class="headline">
-                    Make new friends, meet new lovers
-                  </p>
-                </v-card-text>
+              <v-card-title class="info--text display-2 font-weight-bold">Love &amp; Friendship</v-card-title>
+              <v-card-text>
+                <p class="pb-4 headline">
+                  Make new friends, flirt, meet the love of your life! 
+                </p>
+                <p class="title">
+                  Make new friends as a host or guest. Go skiing, fishing, watch a movie or have dinner at a restaurant together.
+                </p>
+                <p class="title">
+                  Maybe you' ve just met a new friend or your big love from a different place of the world.
+                </p>
+              </v-card-text>
             </v-card>
           </v-col>
         </v-row>
@@ -91,6 +129,7 @@
     data () {
         return {
             isImgVisible: true,
+            overlay: false,
         }
     },
   };
@@ -104,6 +143,9 @@
     outline: none;
   }
 
+  .v-application .caption,
+  .v-application .subtitle-2,
+  .v-application .subtitle-1,
   .v-application .title,
   .v-application .headline,
   .v-application .display-1,

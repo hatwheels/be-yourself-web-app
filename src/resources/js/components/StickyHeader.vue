@@ -11,10 +11,17 @@
       max-width="180px"
       contain
     />
-    
+
     <div class="flex-grow-1"></div>
 
-    <v-btn class="ms-2" rounded color='green' dark>Be a Guest</v-btn>
+    <v-btn
+      class="ms-2 caption font-weight-bold"
+      rounded color='green'
+      dark
+      @click="updateOverlay()"
+    >
+      Be a Guest
+    </v-btn>
 
     <SignUpForm/>
 
@@ -34,6 +41,14 @@
 
     props: {
       dynamicColor: String,
+      showOverlay: Boolean,
+    },
+
+    methods: {
+      updateOverlay () {
+        this.$emit('update:showOverlay', !this.showOverlay);
+        console.log(!this.showOverlay)
+      }
     },
   }
 </script>

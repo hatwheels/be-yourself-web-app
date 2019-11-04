@@ -5,7 +5,7 @@
   >
     <template v-slot:activator="{ on }">
       <v-btn
-        class="ms-2"
+        class="caption font-weight-bold ms-2"
         text
         small
         dark
@@ -18,7 +18,7 @@
       <v-btn text icon @click="state = false">
         <v-icon small>mdi-close</v-icon>
       </v-btn>
-      <form class="px-4 py-4 m-auto" lazy-validation>
+      <form class="px-4 py-4 m-auto caption" lazy-validation>
           <v-text-field
               v-model="email"
               :error-messages="emailErrors"
@@ -41,7 +41,7 @@
               @blur="$v.password.$touch()"
               @click:append="show = !show"
           ></v-text-field>
-          <v-btn block x-large color="green white--text" @click="submit">Log In</v-btn>
+          <v-btn block x-large color="green primary--text font-weight-bold" @click="submit">Log In</v-btn>
       </form>
     </v-card>
     <!-- <v-card>

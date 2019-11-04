@@ -13,13 +13,18 @@
             class="d-flex align-center justify-space-between"
             style="height: 100%;"
         >
-            <div class="pl-8 display-3 font-weight-bold text-center white--text"
+            <div class="pl-8 display-3 font-weight-bold text-center primary--text"
                 style="width: 33%"
             >
                 Travel all over the world
             </div>
             <div
-                class="pl-8 display-3 font-weight-bold text-center white--text"
+                class="pb-12 align-self-end display-3 font-weight-bold text-center primary--text"
+            >
+                Be Yourself!
+            </div>
+            <div
+                class="pl-8 display-3 font-weight-bold text-center primary--text"
                 style="width: 33%"
             >
                 Meet new people
