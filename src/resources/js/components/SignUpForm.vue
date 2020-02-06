@@ -182,3 +182,15 @@
     }
   }
 </script>
+
+<style>
+.v-text-field__slot > .v-label.v-label--active.primary--text {
+  color: black !important;
+}
+.v-input--is-focused.error--text > .v-input__control {
+  color: #f44336 !important;
+}
+.v-input--is-focused > .v-input__control {
+  color: black !important;
+}
+</style>

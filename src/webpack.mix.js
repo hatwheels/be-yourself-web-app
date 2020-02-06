@@ -22,4 +22,4 @@ mix
     plugins: [new VuetifyLoaderPlugin()]
   })
   .js('resources/js/app.js', 'public/js')
-//   .sourceMaps();
+  .sourceMaps();
