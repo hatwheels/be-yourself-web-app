@@ -49,7 +49,7 @@
                   Travel around the world
                 </p>
                 <p class="title">
-                  Choose the host with common interests and hobbies and live a new adventure.
+                  Choose the host with common interests and hobbies and live a new adventure and pack your suitcase.
                 </p>
               </v-card-text>
             </v-card>
